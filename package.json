@@ -1,0 +1,44 @@
+{
+  "name": "@ivuorinen/markdownlint-config",
+  "version": "0.3.15",
+  "type": "module",
+  "description": "ivuorinen's shareable configuration for markdownlint.",
+  "author": {
+    "name": "Ismo Vuorinen",
+    "url": "https://github.com/ivuorinen"
+  },
+  "bugs": {
+    "url": "https://github.com/ivuorinen/base-configs-markdownlint/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "index.json",
+    "scripts/*"
+  ],
+  "homepage": "https://github.com/ivuorinen/base-configs-markdownlint#readme",
+  "keywords": [
+    "markdownlint-config",
+    "markdownlint",
+    "config",
+    "ivuorinen"
+  ],
+  "license": "MIT",
+  "main": "index.json",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivuorinen/base-configs-markdownlint.git"
+  },
+  "scripts": {
+    "postinstall": "node scripts/postinstall.cjs"
+  },
+  "dependencies": {
+    "@ivuorinen/config-checker": "^1.1.12",
+    "markdownlint-cli": "^0.45.0"
+  },
+  "gitHead": "23d15f15743fb59c1dbe658615ef2ed51c54d230"
+}
