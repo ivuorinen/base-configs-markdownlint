@@ -34,11 +34,23 @@
     "url": "git+https://github.com/ivuorinen/base-configs-markdownlint.git"
   },
   "scripts": {
-    "postinstall": "node scripts/postinstall.cjs"
+    "postinstall": "node scripts/postinstall.cjs",
+    "eslint:fix": "eslint '**/*.{js,tsx,ts,mjs,cjs}' --fix",
+    "eslint:report": "eslint '**/*.{js,tsx,ts,mjs,cjs}'",
+    "markdownlint:fix": "markdownlint '**/*.md' --fix",
+    "markdownlint:report": "markdownlint '**/*.md'",
+    "prettier:fix": "prettier '**/*.{js,tsx,ts,json,mjs,cjs}' --write",
+    "prettier:report": "prettier '**/*.{js,tsx,ts,json,mjs,cjs}' --check"
   },
   "dependencies": {
     "@ivuorinen/config-checker": "^1.1.12",
     "markdownlint-cli": "^0.46.0"
   },
-  "gitHead": "23d15f15743fb59c1dbe658615ef2ed51c54d230"
+  "gitHead": "23d15f15743fb59c1dbe658615ef2ed51c54d230",
+  "devDependencies": {
+    "@ivuorinen/eslint-config": "^0.5.13",
+    "@ivuorinen/prettier-config": "^0.3.12",
+    "@ivuorinen/semantic-release-config": "^0.3.18"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
