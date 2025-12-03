@@ -1,75 +1,42 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## [0.3.15](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/markdownlint-config@0.3.14...@ivuorinen/markdownlint-config@0.3.15) (2025-06-12)
 
 **Note:** Version bump only for package @ivuorinen/markdownlint-config
 
-
-
-
-
 ## [0.3.14](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/markdownlint-config@0.3.13...@ivuorinen/markdownlint-config@0.3.14) (2025-05-21)
-
 
 ### Bug Fixes
 
-* **deps:** update markdownlint-cli to 0.45.0 ([#359](https://github.com/ivuorinen/base-configs/issues/359)) ([6b98249](https://github.com/ivuorinen/base-configs/commit/6b98249310852a9f24ffd6a0cdda966c4c864959))
-
-
-
-
+- **deps:** update markdownlint-cli to 0.45.0 ([#359](https://github.com/ivuorinen/base-configs/issues/359)) ([6b98249](https://github.com/ivuorinen/base-configs/commit/6b98249310852a9f24ffd6a0cdda966c4c864959))
 
 ## 0.3.13 (2025-02-23)
 
 **Note:** Version bump only for package @ivuorinen/markdownlint-config
 
-
-
-
-
 ## 0.3.12 (2025-02-23)
-
 
 ### Bug Fixes
 
-* **deps:** update globals to 16.0.0 ([#342](https://github.com/ivuorinen/base-configs/issues/342)) ([04b333b](https://github.com/ivuorinen/base-configs/commit/04b333b445b6beb4344d2f9102bb5d3dc72ae26a))
-
-
-
-
+- **deps:** update globals to 16.0.0 ([#342](https://github.com/ivuorinen/base-configs/issues/342)) ([04b333b](https://github.com/ivuorinen/base-configs/commit/04b333b445b6beb4344d2f9102bb5d3dc72ae26a))
 
 ## [0.3.11](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/markdownlint-config@0.3.10...@ivuorinen/markdownlint-config@0.3.11) (2025-01-28)
 
-
 ### Bug Fixes
 
-* **deps:** update markdownlint-cli to 0.44.0 ([#327](https://github.com/ivuorinen/base-configs/issues/327)) ([b1b2d8e](https://github.com/ivuorinen/base-configs/commit/b1b2d8e581cb2d939eab3ff2ae33643c4419196a))
-
-
-
-
+- **deps:** update markdownlint-cli to 0.44.0 ([#327](https://github.com/ivuorinen/base-configs/issues/327)) ([b1b2d8e](https://github.com/ivuorinen/base-configs/commit/b1b2d8e581cb2d939eab3ff2ae33643c4419196a))
 
 ## 0.3.10 (2025-01-17)
 
-
 ### Bug Fixes
 
-* **deps:** update eslint-config-prettier to 10.0.1 ([#324](https://github.com/ivuorinen/base-configs/issues/324)) ([8a0d38e](https://github.com/ivuorinen/base-configs/commit/8a0d38e173df40b771d42b694a24145559200506))
-
-
-
-
+- **deps:** update eslint-config-prettier to 10.0.1 ([#324](https://github.com/ivuorinen/base-configs/issues/324)) ([8a0d38e](https://github.com/ivuorinen/base-configs/commit/8a0d38e173df40b771d42b694a24145559200506))
 
 ## [0.3.9](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/markdownlint-config@0.3.8...@ivuorinen/markdownlint-config@0.3.9) (2024-11-25)
 
 **Note:** Version bump only for package @ivuorinen/markdownlint-config
-
-
-
-
 
 ## 0.3.8 (2024-11-25)
 
@@ -111,7 +78,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @ivuorinen/markdownlint-config
 
-# [0.3.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/markdownlint-config@0.2.9...@ivuorinen/markdownlint-config@0.3.0) (2024-08-21)
+## [0.3.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/markdownlint-config@0.2.9...@ivuorinen/markdownlint-config@0.3.0) (2024-08-21)
 
 - feat!: module & commonjs in markdownlint ([ca479de](https://github.com/ivuorinen/base-configs/commit/ca479deb20f65f048f128b284c2f178ca9e90ea2))
 
@@ -165,7 +132,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @ivuorinen/markdownlint-config
 
-# [0.2.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/markdownlint-config@0.1.7...@ivuorinen/markdownlint-config@0.2.0) (2023-10-25)
+## [0.2.0](https://github.com/ivuorinen/base-configs/compare/@ivuorinen/markdownlint-config@0.1.7...@ivuorinen/markdownlint-config@0.2.0) (2023-10-25)
 
 ### Features
 

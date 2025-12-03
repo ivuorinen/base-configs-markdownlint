@@ -3,7 +3,6 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
-      - id: requirements-txt-fixer
       - id: detect-private-key
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
@@ -12,8 +11,6 @@ repos:
       - id: check-executables-have-shebangs
       - id: check-shebang-scripts-are-executable
       - id: check-symlinks
-      - id: check-toml
-      - id: check-xml
       - id: check-yaml
         args: [--allow-multiple-documents]
       - id: end-of-file-fixer
@@ -33,31 +30,8 @@ repos:
     hooks:
       - id: yamllint
 
-  - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.11.0-1
-    hooks:
-      - id: shfmt
-
-  - repo: https://github.com/koalaman/shellcheck-precommit
-    rev: v0.11.0
-    hooks:
-      - id: shellcheck
-        args: ['--severity=warning']
-
   - repo: https://github.com/rhysd/actionlint
     rev: v1.7.9
     hooks:
       - id: actionlint
-        args: ['-shellcheck=']
-
-  - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 42.26.11
-    hooks:
-      - id: renovate-config-validator
-
-  - repo: https://github.com/bridgecrewio/checkov.git
-    rev: '3.2.495'
-    hooks:
-      - id: checkov
-        args:
-          - '--quiet'
+        args: ["-shellcheck="]

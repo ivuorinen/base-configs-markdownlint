@@ -1,10 +1,8 @@
 ---
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
-name: Lint Code Base
+name: Lint PR Code Base
 
 on:
-  push:
-    branches: [master, main]
   pull_request:
     branches: [master, main]
 
@@ -14,17 +12,43 @@ concurrency:
 
 permissions: read-all
 
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  GITHUB_TOKEN: ${{ github.token }}
+
 jobs:
   Linter:
     name: PR Lint
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
-      statuses: write
       contents: read
+      issues: write
       packages: read
+      pull-requests: write
+      statuses: write
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install and enable corepack
+        shell: sh
+        run: npm install -g corepack --force && corepack enable
+
+      - name: Yarn Lock Changes
+        uses: Simek/yarn-lock-changes@61d1a0595070b79c1abdc8e1e5a5f5d98b18918c # v0.12.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Run PR Lint
         # https://github.com/ivuorinen/actions
-        uses: ivuorinen/actions/pr-lint@fbbb487332f2b01379192eecb73f7252f1cc54d4 # v2025.11.30
+        uses: ivuorinen/actions/pr-lint@a52399cf74eac2b0963591ab2c6c8eb0f7f50b2d # v2025.12.03
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

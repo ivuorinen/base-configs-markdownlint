@@ -8,10 +8,10 @@ on:
       - main
       - master
     paths:
-      - '.github/labels.yml'
-      - '.github/workflows/sync-labels.yml'
+      - ".github/labels.yml"
+      - ".github/workflows/sync-labels.yml"
   schedule:
-    - cron: '34 5 * * *' # Run every day at 05:34 AM UTC
+    - cron: "34 5 * * *" # Run every day at 05:34 AM UTC
   workflow_call:
   workflow_dispatch:
   merge_group:
@@ -34,8 +34,8 @@ jobs:
 
     steps:
       - name: ⤵️ Checkout Repository
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: ⤵️ Sync Latest Labels Definitions
-        uses: ivuorinen/actions/sync-labels@fbbb487332f2b01379192eecb73f7252f1cc54d4 # v2025.11.30
+        uses: ivuorinen/actions/sync-labels@a52399cf74eac2b0963591ab2c6c8eb0f7f50b2d # v2025.12.03
