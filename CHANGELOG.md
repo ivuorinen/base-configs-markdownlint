@@ -1,3 +1,37 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 1.0.0 (2025-12-06)
+
+
+### Bug Fixes
+
+* **deps:** update markdownlint-cli (0.45.0 → 0.46.0) ([#76](https://github.com/ivuorinen/base-configs-markdownlint/issues/76)) ([70430a7](https://github.com/ivuorinen/base-configs-markdownlint/commit/70430a7c919181651f9494e6aa02208a5a09dfc8))
+* **github-action:** update github/codeql-action (v3.29.0 → v3.29.4) ([#2](https://github.com/ivuorinen/base-configs-markdownlint/issues/2)) ([1eb55c2](https://github.com/ivuorinen/base-configs-markdownlint/commit/1eb55c2f3187433b7863a4d2fbb8eaa088e1adf3))
+* **github-action:** update github/codeql-action (v3.29.4 → v3.29.5) ([#5](https://github.com/ivuorinen/base-configs-markdownlint/issues/5)) ([8be4e9d](https://github.com/ivuorinen/base-configs-markdownlint/commit/8be4e9d6e727ea7bba6b5404f77bce339b563eb5))
+* **github-action:** update github/codeql-action (v3.29.5 → v3.29.8) ([#7](https://github.com/ivuorinen/base-configs-markdownlint/issues/7)) ([d0fe07c](https://github.com/ivuorinen/base-configs-markdownlint/commit/d0fe07c2a9600eae3477e6b85945b068d9081f42))
+* **github-action:** update github/codeql-action (v3.29.8 → v3.29.9) ([#11](https://github.com/ivuorinen/base-configs-markdownlint/issues/11)) ([d2f14d9](https://github.com/ivuorinen/base-configs-markdownlint/commit/d2f14d921f24cb59205e1c56eff01df637e42920))
+* **github-action:** update github/codeql-action (v3.29.9 → v3.29.10) ([#12](https://github.com/ivuorinen/base-configs-markdownlint/issues/12)) ([5d20d9c](https://github.com/ivuorinen/base-configs-markdownlint/commit/5d20d9c68dade95f91b62f4801cebe208e6d58e1))
+* **github-action:** update ivuorinen/actions (25.7.7 → 25.7.28) ([#4](https://github.com/ivuorinen/base-configs-markdownlint/issues/4)) ([c49373a](https://github.com/ivuorinen/base-configs-markdownlint/commit/c49373a8ee848a02592a7174e7973c5176d340eb))
+* **github-action:** update ivuorinen/actions (25.8.11 → 25.8.18) ([#13](https://github.com/ivuorinen/base-configs-markdownlint/issues/13)) ([57dfa7a](https://github.com/ivuorinen/base-configs-markdownlint/commit/57dfa7a223f0cd54ba99fa38b26a67bef4c0eb92))
+* **github-action:** update ivuorinen/actions (25.8.4 → 25.8.11) ([#9](https://github.com/ivuorinen/base-configs-markdownlint/issues/9)) ([c0ede7f](https://github.com/ivuorinen/base-configs-markdownlint/commit/c0ede7fc02ba5b80b36befc663542686af2b0e70))
+* **github-release:** update adrienverge/yamllint (v1.37.0 → v1.37.1) ([#16](https://github.com/ivuorinen/base-configs-markdownlint/issues/16)) ([f35758d](https://github.com/ivuorinen/base-configs-markdownlint/commit/f35758d4470415f703f4bccf9779700864d31179))
+* **github-release:** update bridgecrewio/checkov (3.2.400 → 3.2.464) ([#17](https://github.com/ivuorinen/base-configs-markdownlint/issues/17)) ([111b8fb](https://github.com/ivuorinen/base-configs-markdownlint/commit/111b8fb0bf6e01b30adca9910f47550a690e3d6f))
+* **github-release:** update renovatebot/pre-commit-hooks (41.82.6 → 41.82.9) ([#24](https://github.com/ivuorinen/base-configs-markdownlint/issues/24)) ([d10f0e5](https://github.com/ivuorinen/base-configs-markdownlint/commit/d10f0e57359b633a7ea86bde32e1f06c17f64385))
+* **github-release:** update renovatebot/pre-commit-hooks (41.82.9 → 41.82.10) ([#25](https://github.com/ivuorinen/base-configs-markdownlint/issues/25)) ([361dc31](https://github.com/ivuorinen/base-configs-markdownlint/commit/361dc318cd43dd67943e2f14493d531bde73c4e3))
+
+
+### Features
+
+* **github-action:** update actions/checkout (v4.2.2 → v4.3.0) ([#10](https://github.com/ivuorinen/base-configs-markdownlint/issues/10)) ([7c0b358](https://github.com/ivuorinen/base-configs-markdownlint/commit/7c0b358d69a6df0de09e7ed2a0d7e57beee2c89a))
+* **github-action:** update ivuorinen/actions (25.6.17 → 25.7.7) ([#3](https://github.com/ivuorinen/base-configs-markdownlint/issues/3)) ([c9a7dd5](https://github.com/ivuorinen/base-configs-markdownlint/commit/c9a7dd52c58e6d2d6d6e41eebea90162c199fc22))
+* **github-action:** update ivuorinen/actions (25.7.28 → 25.8.4) ([#6](https://github.com/ivuorinen/base-configs-markdownlint/issues/6)) ([f503281](https://github.com/ivuorinen/base-configs-markdownlint/commit/f5032819223d67b1645829363bd59be8d6cd935b))
+* **github-release:** update igorshubovych/markdownlint-cli (v0.44.0 → v0.45.0) ([#18](https://github.com/ivuorinen/base-configs-markdownlint/issues/18)) ([c048f4c](https://github.com/ivuorinen/base-configs-markdownlint/commit/c048f4c74742fde8c579989148ad3eb8de623381))
+* **github-release:** update koalaman/shellcheck-precommit (v0.10.0 → v0.11.0) ([#19](https://github.com/ivuorinen/base-configs-markdownlint/issues/19)) ([fac83ff](https://github.com/ivuorinen/base-configs-markdownlint/commit/fac83ffc20c5c10fda2c44465df254d82d1c3f64))
+* initial import from base-configs ([3a9cef4](https://github.com/ivuorinen/base-configs-markdownlint/commit/3a9cef40bdc0a64c1cf51319bfcdec1677da58ce))
+
 # Change Log
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
