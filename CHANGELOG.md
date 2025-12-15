@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/ivuorinen/base-configs-markdownlint/compare/v1.0.0...v1.0.1) (2025-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update markdownlint-cli (0.46.0 → 0.47.0) ([#86](https://github.com/ivuorinen/base-configs-markdownlint/issues/86)) ([016f796](https://github.com/ivuorinen/base-configs-markdownlint/commit/016f79684ec1f6e2eee0e527963e274a8e9eb795))
+
 # 1.0.0 (2025-12-06)
 
 
