@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/ivuorinen/base-configs-markdownlint/compare/v1.0.3...v1.0.4) (2026-02-27)
+
+
+### Bug Fixes
+
+* **deps:** add minimatch to fix vulnerable package versions ([130fdec](https://github.com/ivuorinen/base-configs-markdownlint/commit/130fdecf6428961819065fc635623db9b718bc22))
+
 ## [1.0.3](https://github.com/ivuorinen/base-configs-markdownlint/compare/v1.0.2...v1.0.3) (2026-02-27)
 
 ## [1.0.2](https://github.com/ivuorinen/base-configs-markdownlint/compare/v1.0.1...v1.0.2) (2026-02-26)
