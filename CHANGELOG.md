@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/ivuorinen/base-configs-markdownlint/compare/v1.0.4...v1.0.5) (2026-02-27)
+
+
+### Bug Fixes
+
+* **ci:** use GITHUB_TOKEN for semantic-release and harden workflow permissions ([9e10b3e](https://github.com/ivuorinen/base-configs-markdownlint/commit/9e10b3e2b29aeab91e801302ec4d210de9c72cc3))
+
 ## [1.0.4](https://github.com/ivuorinen/base-configs-markdownlint/compare/v1.0.3...v1.0.4) (2026-02-27)
 
 
