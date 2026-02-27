@@ -38,7 +38,8 @@
   },
   "dependencies": {
     "@ivuorinen/config-checker": "^2.1.2",
-    "markdownlint-cli": "^0.47.0"
+    "markdownlint-cli": "^0.47.0",
+    "minimatch": "^10.2.4"
   },
   "packageManager": "yarn@4.12.0",
   "devDependencies": {
