@@ -37,14 +37,14 @@
     "postinstall": "node scripts/postinstall.cjs"
   },
   "dependencies": {
-    "@ivuorinen/config-checker": "^2.1.1",
+    "@ivuorinen/config-checker": "^2.1.2",
     "markdownlint-cli": "^0.47.0"
   },
   "packageManager": "yarn@4.12.0",
   "devDependencies": {
-    "@ivuorinen/semantic-release-config": "^1.0.0"
+    "@ivuorinen/semantic-release-config": "^1.1.3"
   },
   "resolutions": {
-    "minimatch": ">=10.2.1"
+    "minimatch": ">=10.2.3"
   }
 }

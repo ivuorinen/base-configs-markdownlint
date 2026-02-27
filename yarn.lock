@@ -82,10 +82,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ivuorinen/config-checker@npm:^2.0.0, @ivuorinen/config-checker@npm:^2.1.1":
+"@ivuorinen/config-checker@npm:^2.0.0":
   version: 2.1.1
   resolution: "@ivuorinen/config-checker@npm:2.1.1"
   checksum: 10c0/b342992ca95a2e8088bf1c36e9d826fb67148023763cc473e752a012ba03b76b5458606a9ddb0b6fe0bcc261d2c0d0fa1c9be877aa4cff78a64fd0eb0b60cf2e
+  languageName: node
+  linkType: hard
+
+"@ivuorinen/config-checker@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "@ivuorinen/config-checker@npm:2.1.2"
+  checksum: 10c0/e607eb7196a6c50309b654bb0cd46f64501f2a5ba211933bb73a43a6316b7455b563579a387778d00f31885d0fcf04d3d055aa1bd6ddf580dccca76cbb22d6fd
   languageName: node
   linkType: hard
 
@@ -93,21 +100,21 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ivuorinen/markdownlint-config@workspace:."
   dependencies:
-    "@ivuorinen/config-checker": "npm:^2.1.1"
-    "@ivuorinen/semantic-release-config": "npm:^1.0.0"
+    "@ivuorinen/config-checker": "npm:^2.1.2"
+    "@ivuorinen/semantic-release-config": "npm:^1.1.3"
     markdownlint-cli: "npm:^0.47.0"
   languageName: unknown
   linkType: soft
 
-"@ivuorinen/semantic-release-config@npm:^1.0.0":
-  version: 1.1.0
-  resolution: "@ivuorinen/semantic-release-config@npm:1.1.0"
+"@ivuorinen/semantic-release-config@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "@ivuorinen/semantic-release-config@npm:1.1.3"
   dependencies:
     "@ivuorinen/config-checker": "npm:^2.0.0"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/git": "npm:^10.0.1"
     semantic-release: "npm:^25.0.2"
-  checksum: 10c0/7f3c7c0e41819d05903c8f4010ac3552c9774550f74d125a9d9f4290c31d2d233ce35c30f9f877e3dd756c8c74295b0d9c54356c966e1fc4423e8fc470425b5a
+  checksum: 10c0/440cd2ae8b83909f9e8011e26cf9aeccd4dcf6f69154c113a332bcef1786dec2d8bd468b819a6875983a9fcc1b5d20dbcfa33d9b6f9f9871719f3dc25be3cb10
   languageName: node
   linkType: hard
 
@@ -2891,7 +2898,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:>=10.2.1":
+"minimatch@npm:>=10.2.3":
   version: 10.2.4
   resolution: "minimatch@npm:10.2.4"
   dependencies:
