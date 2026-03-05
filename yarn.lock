@@ -110,14 +110,14 @@ __metadata:
   linkType: soft
 
 "@ivuorinen/semantic-release-config@npm:^1.1.3":
-  version: 1.1.4
-  resolution: "@ivuorinen/semantic-release-config@npm:1.1.4"
+  version: 1.1.8
+  resolution: "@ivuorinen/semantic-release-config@npm:1.1.8"
   dependencies:
     "@ivuorinen/config-checker": "npm:^2.0.0"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/git": "npm:^10.0.1"
     semantic-release: "npm:^25.0.2"
-  checksum: 10c0/9cc316b11d917236c1dadffeceee7141cc24dcafc5b7853871a186acb253334bf42536f7eee218710f7864f839b2df4f1010113a68d51f86e4b08409bf386441
+  checksum: 10c0/583705e5833ec7162882f9653af9c4e4dfcd1655a9058b824920e121d6541bee7b59a85440d1fb8d04c8c039a4dba35b1cefe969768d674cb87bffc5cb48fde6
   languageName: node
   linkType: hard
 
@@ -1177,17 +1177,17 @@ __metadata:
   linkType: hard
 
 "conventional-changelog-angular@npm:^8.0.0":
-  version: 8.2.0
-  resolution: "conventional-changelog-angular@npm:8.2.0"
+  version: 8.3.0
+  resolution: "conventional-changelog-angular@npm:8.3.0"
   dependencies:
     compare-func: "npm:^2.0.0"
-  checksum: 10c0/15f4d455df3152db62d3a7e92c83abe2438721e4b6736cae20b1ce17162fa0aca098b3a62f4f50d3541e4aa300f89f8768d7ba45b83cca77336ffb3700669e9e
+  checksum: 10c0/bab87fa741a25e4fb623e2629912a5e592de5ed616398bee0cd9779dc950aae2a78ac48a6f4268cbb5f5544bb33644e01c7b40cea378bb9763ae5304cc22efc2
   languageName: node
   linkType: hard
 
 "conventional-changelog-writer@npm:^8.0.0":
-  version: 8.3.0
-  resolution: "conventional-changelog-writer@npm:8.3.0"
+  version: 8.4.0
+  resolution: "conventional-changelog-writer@npm:8.4.0"
   dependencies:
     "@simple-libs/stream-utils": "npm:^1.2.0"
     conventional-commits-filter: "npm:^5.0.0"
@@ -1196,7 +1196,7 @@ __metadata:
     semver: "npm:^7.5.2"
   bin:
     conventional-changelog-writer: dist/cli/index.js
-  checksum: 10c0/e0ce001c54085a72504c1af6a6eade4ddf2ccf1e155ba8bf80bb03228b36c719b8a1f389d222c13f32f224d0ac448e0bed40222ebfbfe9a813e0b23d6162d258
+  checksum: 10c0/d657bf74c470e5d515d3a07814d266e6e2aea018e6867bfefa4bc486bb3f948b47b01936d65e46b3090111823364c21c201f9fbe875b1fc805cdf884bb032bc1
   languageName: node
   linkType: hard
 
@@ -1597,13 +1597,13 @@ __metadata:
   linkType: hard
 
 "fs-extra@npm:^11.0.0":
-  version: 11.3.3
-  resolution: "fs-extra@npm:11.3.3"
+  version: 11.3.4
+  resolution: "fs-extra@npm:11.3.4"
   dependencies:
     graceful-fs: "npm:^4.2.0"
     jsonfile: "npm:^6.0.1"
     universalify: "npm:^2.0.0"
-  checksum: 10c0/984924ff4104e3e9f351b658a864bf3b354b2c90429f57aec0acd12d92c4e6b762cbacacdffb4e745b280adce882e1f980c485d9f02c453f769ab4e7fc646ce3
+  checksum: 10c0/e08276f767a62496ae97d711aaa692c6a478177f24a85979b6a2881c9db9c68b8c2ad5da0bcf92c0b2a474cea6e935ec245656441527958fd8372cb647087df0
   languageName: node
   linkType: hard
 
@@ -2204,13 +2204,13 @@ __metadata:
   linkType: hard
 
 "katex@npm:^0.16.0":
-  version: 0.16.33
-  resolution: "katex@npm:0.16.33"
+  version: 0.16.35
+  resolution: "katex@npm:0.16.35"
   dependencies:
     commander: "npm:^8.3.0"
   bin:
     katex: cli.js
-  checksum: 10c0/b2b655e4a3592ee0db45fea87856542383109ed598504a1c67b8eb957b9ba4dab752d5865f6354579d2a260d71e3e3594278a66c184b70c574a52481abee8caa
+  checksum: 10c0/f0354e827b0845c33fb6b2188994b7207d199a7420f9fe549b750502f96cc5b723f88940957d6063012233dbeeea8be858b52e9a4ff621784dfab247be268514
   languageName: node
   linkType: hard
 
