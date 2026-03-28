@@ -103,21 +103,21 @@ __metadata:
   resolution: "@ivuorinen/markdownlint-config@workspace:."
   dependencies:
     "@ivuorinen/config-checker": "npm:^2.1.2"
-    "@ivuorinen/semantic-release-config": "npm:^1.1.3"
+    "@ivuorinen/semantic-release-config": "npm:^1.1.20"
     markdownlint-cli: "npm:^0.48.0"
-    minimatch: "npm:^10.2.4"
   languageName: unknown
   linkType: soft
 
-"@ivuorinen/semantic-release-config@npm:^1.1.3":
-  version: 1.1.8
-  resolution: "@ivuorinen/semantic-release-config@npm:1.1.8"
+"@ivuorinen/semantic-release-config@npm:^1.1.20":
+  version: 1.1.20
+  resolution: "@ivuorinen/semantic-release-config@npm:1.1.20"
   dependencies:
     "@ivuorinen/config-checker": "npm:^2.0.0"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/git": "npm:^10.0.1"
+    "@semantic-release/github": "npm:^12.0.6"
     semantic-release: "npm:^25.0.2"
-  checksum: 10c0/583705e5833ec7162882f9653af9c4e4dfcd1655a9058b824920e121d6541bee7b59a85440d1fb8d04c8c039a4dba35b1cefe969768d674cb87bffc5cb48fde6
+  checksum: 10c0/04daa6a96f55b46dd87662fd0df86c44ad5a6071e9a37feff5ede494406504ae755aea644a09948f7949d56100af29a137c83a5a223bab266b7e76d2a9dd5c3c
   languageName: node
   linkType: hard
 
@@ -538,7 +538,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:^12.0.0":
+"@semantic-release/github@npm:^12.0.0, @semantic-release/github@npm:^12.0.6":
   version: 12.0.6
   resolution: "@semantic-release/github@npm:12.0.6"
   dependencies:
