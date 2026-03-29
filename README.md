@@ -7,7 +7,7 @@
 ## Table of Contents <!-- omit in toc -->
 
 - [Installation](#installation)
-- [Documentations](#documentations)
+- [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Changelog](#changelog)
 - [License](#license)
@@ -32,7 +32,7 @@ After installing it, a _`.markdownlint.json`_ file will be created automatically
 }
 ```
 
-## Documentations
+## Documentation
 
 Read the [MarkdownLint docs][markdownlint-docs-link] for more information.
 
@@ -54,7 +54,7 @@ Distributed under the MIT License. See [LICENSE][license-link] for more informat
 [contributing-link]: https://github.com/ivuorinen/.github/blob/main/CONTRIBUTING.md
 [issue-link]: https://github.com/ivuorinen/base-configs-markdownlint/issues
 [license-badge]: https://img.shields.io/github/license/ivuorinen/base-configs-markdownlint?style=flat-square&labelColor=292a44&color=663399
-[license-link]: ./LICENSE
+[license-link]: ./LICENSE.md
 [npm-badge]: https://img.shields.io/npm/v/@ivuorinen/markdownlint-config?style=flat-square&labelColor=292a44&color=663399
 [npm-link]: https://www.npmjs.com/package/@ivuorinen/markdownlint-config
 [pull-request-link]: https://github.com/ivuorinen/base-configs-markdownlint/pulls

@@ -4,7 +4,7 @@ name: Lint PR Code Base
 
 on:
   pull_request:
-    branches: [master, main]
+    branches: [main]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
