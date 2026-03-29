@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.23](https://github.com/ivuorinen/base-configs-markdownlint/compare/v1.0.22...v1.0.23) (2026-03-29)
+
+
+### Bug Fixes
+
+* project hygiene improvements from full codebase review ([#151](https://github.com/ivuorinen/base-configs-markdownlint/issues/151)) ([adcbbe5](https://github.com/ivuorinen/base-configs-markdownlint/commit/adcbbe53a6ea49d568bbe9c32c19364d35b0c461))
+
 ## [1.0.22](https://github.com/ivuorinen/base-configs-markdownlint/compare/v1.0.21...v1.0.22) (2026-03-27)
 
 ## [1.0.21](https://github.com/ivuorinen/base-configs-markdownlint/compare/v1.0.20...v1.0.21) (2026-03-27)
