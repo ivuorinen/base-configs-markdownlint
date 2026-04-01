@@ -1,6 +1,6 @@
 {
   "name": "@ivuorinen/markdownlint-config",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "type": "module",
   "description": "ivuorinen's shareable configuration for markdownlint.",
   "author": {
