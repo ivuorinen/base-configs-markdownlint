@@ -48,7 +48,7 @@ See [CHANGELOG][changelog-link] for a human-readable history of changes.
 
 Distributed under the MIT License. See [LICENSE][license-link] for more information.
 
-[changelog-link]: ./CHANGELOG.md
+[changelog-link]: https://github.com/ivuorinen/base-configs-markdownlint/releases
 [markdownlint-docs-link]: https://github.com/DavidAnson/markdownlint
 [markdownlint-link]: https://github.com/DavidAnson/markdownlint
 [contributing-link]: https://github.com/ivuorinen/.github/blob/main/CONTRIBUTING.md
