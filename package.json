@@ -49,6 +49,8 @@
     "@ivuorinen/semantic-release-config": "^1.2.0"
   },
   "resolutions": {
-    "minimatch": ">=10.2.3"
+    "minimatch": "^10.2.4",
+    "picomatch": "^4.0.4",
+    "undici": "^8.0.0"
   }
 }
