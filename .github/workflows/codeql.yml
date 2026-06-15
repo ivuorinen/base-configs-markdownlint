@@ -28,7 +28,7 @@ jobs:
         language: ["actions", "javascript"]
     steps:
       - name: CodeQL Analysis
-        uses: ivuorinen/actions/codeql-analysis@f2d15a840e8888ba4f0c348ea70b6522cf2dc541 # v2026.04.15
+        uses: ivuorinen/actions/codeql-analysis@121af64df2985470a81ff4e2eb60cdc52cb7745b # v2026.06.14
         with:
           language: ${{ matrix.language }}
           queries: security-and-quality
