@@ -44,7 +44,7 @@
     "@ivuorinen/config-checker": "^2.1.2",
     "markdownlint-cli": "^0.48.0"
   },
-  "packageManager": "yarn@4.15.0",
+  "packageManager": "yarn@4.16.0",
   "devDependencies": {
     "@ivuorinen/semantic-release-config": "^1.2.0"
   },
