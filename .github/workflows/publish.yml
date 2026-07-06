@@ -6,6 +6,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions: {}
 
 env:
@@ -17,16 +21,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
-      statuses: write
-      contents: read
-      packages: read
-      issues: write
-      pull-requests: write
+      statuses: write # to update commit statuses
+      contents: read # to check out the repository
+      packages: read # to read packages
+      issues: write # to comment on and label issues
+      pull-requests: write # to comment on and label pull requests
 
     steps:
       - name: Run PR Lint
         # https://github.com/ivuorinen/actions
-        uses: ivuorinen/actions/pr-lint@8395dad6b7d5d7d2e1d016cac1eede33ab404a3c # v2026.06.18
+        uses: ivuorinen/actions/pr-lint@94a4f68a6b95ecc1677fbcac1683119fd869adf7 # v2026.07.04
 
   publish:
     name: Publish
@@ -43,6 +47,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
+          persist-credentials: false
           fetch-depth: 0
 
       - name: Setup Node.js Environment

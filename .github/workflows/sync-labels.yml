@@ -29,13 +29,14 @@ jobs:
     timeout-minutes: 10
 
     permissions:
-      contents: read
-      issues: write
+      contents: read # to check out the repository
+      issues: write # to comment on and label issues
 
     steps:
       - name: ⤵️ Checkout Repository
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
+          persist-credentials: false
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: ⤵️ Sync Latest Labels Definitions
-        uses: ivuorinen/actions/sync-labels@8395dad6b7d5d7d2e1d016cac1eede33ab404a3c # v2026.06.18
+        uses: ivuorinen/actions/sync-labels@94a4f68a6b95ecc1677fbcac1683119fd869adf7 # v2026.07.04
