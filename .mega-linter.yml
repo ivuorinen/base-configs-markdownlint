@@ -3,6 +3,13 @@
 # See all available variables at
 # https://megalinter.io/configuration/ and in linters documentation
 
+# Ensure zizmor runs authenticated: MegaLinter unsets GITHUB_TOKEN for linters
+# unless listed here, which left zizmor unauthenticated and failing
+# impostor-commit with HTTP 401.
+# https://megalinter.io/latest/descriptors/action_zizmor/
+ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
+  - GITHUB_TOKEN
+
 APPLY_FIXES: all
 SHOW_ELAPSED_TIME: false # Show elapsed time at the end of MegaLinter run
 PARALLEL: true

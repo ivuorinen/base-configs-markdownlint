@@ -1,0 +1,12 @@
+---
+# zizmor configuration: https://docs.zizmor.sh/configuration/
+rules:
+  adhoc-packages:
+    # corepack must be bootstrapped globally; no lockfile applies
+    ignore:
+      - pr-lint.yml
+      - publish.yml
+  use-trusted-publishing:
+    # npm trusted publishing requires registry-side setup; tracked separately
+    ignore:
+      - publish.yml
