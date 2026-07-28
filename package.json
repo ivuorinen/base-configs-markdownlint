@@ -46,7 +46,7 @@
   },
   "packageManager": "yarn@4.17.1",
   "devDependencies": {
-    "@ivuorinen/semantic-release-config": "^1.2.8"
+    "@ivuorinen/semantic-release-config": "^2.0.0"
   },
   "resolutions": {
     "minimatch": "^10.2.4",
