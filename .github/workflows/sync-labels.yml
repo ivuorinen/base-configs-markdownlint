@@ -39,4 +39,4 @@ jobs:
           persist-credentials: false
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: ⤵️ Sync Latest Labels Definitions
-        uses: ivuorinen/actions/sync-labels@94a4f68a6b95ecc1677fbcac1683119fd869adf7 # v2026.07.04
+        uses: ivuorinen/actions/sync-labels@08beec49e790e0093f5df8063f3a484ac5a75e34 # v2026.08.12
