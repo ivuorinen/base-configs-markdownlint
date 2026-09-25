@@ -2,5 +2,36 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>ivuorinen/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "description": "GitHub Actions and pre-commit hooks never reach the published tarball, so updating one must never release. The actions scope matches the shared release rule {type: chore, scope: actions, release: false} for patch, minor and major alike; without it a major bump arrives as chore(deps)!, which releases a major.",
+      "matchManagers": [
+        "github-actions",
+        "pre-commit"
+      ],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "actions"
+    },
+    {
+      "description": "devDependencies never reach consumers, so updating one must never release. The literal prefix is needed because the shared preset's major rule sets commitMessagePrefix 'chore(deps)!: ', which a packageRule can only override, not unset; 'chore(actions)' maps to release: false in @ivuorinen/semantic-release-config. The separate group keeps dev updates out of groups that also hold runtime dependencies, whose PR title would otherwise decide the release for both.",
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "semanticCommitType": "chore",
+      "semanticCommitScope": "actions",
+      "commitMessagePrefix": "chore(actions): ",
+      "groupName": "devDependencies"
+    },
+    {
+      "description": "pre-commit hook majors: the shared preset restores the 'chore(actions): ' prefix for github-actions majors only, so without this a hook major still arrives as 'chore(deps)!: ' and releases a major.",
+      "matchManagers": [
+        "pre-commit"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "commitMessagePrefix": "chore(actions): "
+    }
   ]
 }
