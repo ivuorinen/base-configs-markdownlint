@@ -24,7 +24,7 @@ npm install @ivuorinen/markdownlint-config --save-dev
 yarn add @ivuorinen/markdownlint-config --dev
 ```
 
-After installing it, a _`.markdownlint.json`_ file will be created automatically in the project's root folder with the following configuration:
+Create a _`.markdownlint.json`_ in the project's root folder with the following configuration:
 
 ```json
 {
@@ -32,13 +32,20 @@ After installing it, a _`.markdownlint.json`_ file will be created automatically
 }
 ```
 
+With npm, a `postinstall` script writes exactly this file when the project has no markdownlint config yet (npm 11
+warns that the script is not covered by `allowScripts`). Yarn 4 does not run dependency install scripts, so no file is
+written. pnpm refuses unapproved install scripts and fails the install until you allow this package with
+`pnpm approve-builds`. In both cases create the file by hand as above.
+
+Requires Node.js `^22.22.2 || ^24.15.0 || >=26`, the floor of the bundled `markdownlint-cli`.
+
 ## Documentation
 
 Read the [MarkdownLint docs][markdownlint-docs-link] for more information.
 
 ## Contributing
 
-If you are interested in helping contribute, please take a look at our [contribution guidelines][contributing-link] and open an [issue][issue-link] or [pull request][pull-request-link].
+If you are interested in helping contribute, please open an [issue][issue-link] or [pull request][pull-request-link].
 
 ## Changelog
 
@@ -51,7 +58,6 @@ Distributed under the MIT License. See [LICENSE][license-link] for more informat
 [changelog-link]: https://github.com/ivuorinen/base-configs-markdownlint/releases
 [markdownlint-docs-link]: https://github.com/DavidAnson/markdownlint
 [markdownlint-link]: https://github.com/DavidAnson/markdownlint
-[contributing-link]: https://github.com/ivuorinen/.github/blob/main/CONTRIBUTING.md
 [issue-link]: https://github.com/ivuorinen/base-configs-markdownlint/issues
 [license-badge]: https://img.shields.io/github/license/ivuorinen/base-configs-markdownlint?style=flat-square&labelColor=292a44&color=663399
 [license-link]: ./LICENSE.md

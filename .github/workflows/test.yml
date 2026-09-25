@@ -1,0 +1,69 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Deny-by-default at the workflow level; the job grants only what it needs.
+permissions: {}
+
+jobs:
+  test:
+    name: Test (Node ${{ matrix.node-version }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: read # required to checkout the repository
+
+    strategy:
+      fail-fast: false
+      # The floor must match engines.node in package.json, so the support
+      # range this package advertises is one it has actually been run on.
+      matrix:
+        node-version: ["22.22.2", "24.15.0", "26"]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Enable corepack
+        shell: bash
+        # Node 25 dropped the bundled Corepack, so the 26 leg has none. Where the
+        # runtime ships Corepack use it; otherwise install a version-pinned copy,
+        # never a floating one.
+        run: |
+          if [ "$(node -p 'parseInt(process.versions.node, 10)')" -ge 25 ]; then
+            npm install -g --ignore-scripts corepack@0.35.0
+          fi
+          corepack enable
+
+      # The postinstall tests load @ivuorinen/config-checker, so the suite needs
+      # dependencies. --mode=skip-build keeps dependency lifecycle scripts from
+      # executing on the runner; the tests invoke this package's own postinstall
+      # directly rather than relying on install to have run it.
+      - name: Install Dependencies
+        shell: bash
+        run: yarn install --immutable --mode=skip-build
+
+      - name: Run tests
+        shell: bash
+        run: yarn test

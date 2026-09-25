@@ -16,8 +16,9 @@ repos:
       - id: end-of-file-fixer
       - id: mixed-line-ending
         args: [--fix=auto]
-      - id: pretty-format-json
-        args: [--autofix, --no-sort-keys]
+  # No pretty-format-json hook: it expands every array one element per line,
+  # which Prettier (MegaLinter's JSON formatter) collapses straight back, so
+  # the two autofixers revert each other and the hook fails every run.
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.49.1

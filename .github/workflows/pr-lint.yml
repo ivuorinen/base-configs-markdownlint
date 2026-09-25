@@ -10,11 +10,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+# No workflow-level `env:`: a secret placed there reaches every step, including
+# third-party actions that have no use for it. Linting needs no npm credential.
 permissions: {}
-
-env:
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-  GITHUB_TOKEN: ${{ github.token }}
 
 jobs:
   Linter:
@@ -35,9 +33,16 @@ jobs:
           persist-credentials: false
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install and enable corepack
-        shell: sh
-        run: npm install -g corepack --force && corepack enable
+      - name: Enable corepack
+        shell: bash
+        # No setup-node here, so this runs on the runner image's Node. Node 25+
+        # no longer bundles corepack; install a pinned copy with scripts off
+        # only then, never a floating one.
+        run: |
+          if [ "$(node -p 'parseInt(process.versions.node, 10)')" -ge 25 ]; then
+            npm install -g --ignore-scripts corepack@0.35.0
+          fi
+          corepack enable
 
       - name: Yarn Lock Changes
         uses: Simek/yarn-lock-changes@59f47ee499424d2c2437c5aebf863b5c6d50a5bc # v0.14.1
@@ -45,11 +50,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Run PR Lint
         # https://github.com/ivuorinen/actions
         uses: ivuorinen/actions/pr-lint@08beec49e790e0093f5df8063f3a484ac5a75e34 # v2026.08.12
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
