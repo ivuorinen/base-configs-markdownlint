@@ -12,20 +12,21 @@ concurrency:
 
 permissions: {}
 
-env:
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+# NPM_TOKEN is deliberately not set at workflow level: that would hand the
+# publish credential to the lint job, which runs third-party actions. It is
+# scoped to the Semantic Release step only.
 
 jobs:
   Linter:
     name: Lint
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # Push-only workflow: there is no issue or pull request to comment on, so
+    # no issues/pull-requests write scope.
     permissions:
       statuses: write # to update commit statuses
       contents: read # to check out the repository
       packages: read # to read packages
-      issues: write # to comment on and label issues
-      pull-requests: write # to comment on and label pull requests
 
     steps:
       - name: Run PR Lint
@@ -58,21 +59,25 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           scope: "@ivuorinen"
 
-      - name: Install and enable corepack
+      - name: Enable corepack
         shell: sh
-        run: npm install -g corepack --force && corepack enable
+        # .nvmrc pins Node 26, which no longer bundles corepack. Install a pinned
+        # copy with install scripts disabled — never a floating one in the job
+        # that holds the release credentials.
+        run: npm install -g --ignore-scripts corepack@0.35.0 && corepack enable
 
       - name: Cache Node Modules
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-        id: cache
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('**/yarn.lock') }}
+          key: node-modules-${{ hashFiles('.nvmrc', '**/yarn.lock') }}
 
+      # Unconditional and immutable: a package.json-only change keeps the cache
+      # key, and skipping the install on a hit would release against a stale
+      # tree (semantic-release reads its rules from node_modules).
       - name: Install Dependencies
         shell: bash
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn install
+        run: yarn install --immutable --mode=skip-build
 
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@b12c8f6015dc215fe37bc154d4ad456dd3833c90 # v6.0.0
