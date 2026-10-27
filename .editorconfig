@@ -20,7 +20,8 @@ trim_trailing_whitespace = false
 tab_width = 4
 indent_style = tab
 
-# JSON Lines holds one record per line by definition, so a record cannot be
-# wrapped. docs/audit/findings/resolved.jsonl is the findings ledger.
-[*.jsonl]
+# The findings store is written by the nitpicker findings tool, not by hand.
+# INDEX.md table rows carry each finding's title and resolved.jsonl holds one
+# record per line, so neither can be wrapped. Last, so it overrides [{*.md}].
+[docs/audit/findings/**]
 max_line_length = off
