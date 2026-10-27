@@ -24,4 +24,4 @@ indent_style = tab
 # INDEX.md table rows carry each finding's title and resolved.jsonl holds one
 # record per line, so neither can be wrapped. Last, so it overrides [{*.md}].
 [docs/audit/findings/**]
-max_line_length = off
+max_line_length = unset
