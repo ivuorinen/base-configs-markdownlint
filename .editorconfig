@@ -19,3 +19,8 @@ trim_trailing_whitespace = false
 [{*.mk,GNUmakefile,makefile}]
 tab_width = 4
 indent_style = tab
+
+# JSON Lines holds one record per line by definition, so a record cannot be
+# wrapped. docs/audit/findings/resolved.jsonl is the findings ledger.
+[*.jsonl]
+max_line_length = off
