@@ -29,9 +29,10 @@ const fileConfigObject = {
 };
 
 // "wx" makes "does it exist?" and "write it" one atomic step, so a concurrent
-// install cannot create the file in between and have it overwritten.
+// install cannot create the file in between and have it overwritten. The
+// trailing newline keeps the file passing the consumer's EditorConfig check.
 try {
-  fs.writeFileSync(filePath, JSON.stringify(fileConfigObject, undefined, 2), { flag: "wx" });
+  fs.writeFileSync(filePath, `${JSON.stringify(fileConfigObject, undefined, 2)}\n`, { flag: "wx" });
 } catch (error) {
   if (error.code !== "EEXIST") {
     console.log(`markdownlint-config: could not write ${filePath} (${error.code || error.message}).`);
