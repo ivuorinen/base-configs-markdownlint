@@ -47,10 +47,5 @@
   "packageManager": "yarn@4.18.1",
   "devDependencies": {
     "@ivuorinen/semantic-release-config": "^3.0.0"
-  },
-  "resolutions": {
-    "minimatch": "^10.2.4",
-    "picomatch": "^4.0.4",
-    "undici": "^8.0.0"
   }
 }
