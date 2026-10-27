@@ -1,0 +1,34 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/dependabot-2.0.json
+#
+# Security updates only. Renovate opens the version updates, so
+# `open-pull-requests-limit: 0` turns Dependabot's off; that limit and
+# `schedule` apply only to version updates, while `commit-message` and
+# `versioning-strategy` also shape the security updates GitHub opens here.
+#
+# Without this file Dependabot copied the repository's chore(deps) style, which
+# @ivuorinen/semantic-release-config releases as a patch. These updates only
+# change yarn.lock, and the published tarball contains no lockfile (see `files`
+# in package.json), so each such release changed nothing for consumers. The
+# `lockfile` scope has no release rule, so like any chore it releases nothing.
+# (`actions` would too, but the shared Renovate preset reserves it for GitHub
+# Actions.)
+#
+# `versioning-strategy: lockfile-only` is what keeps that title true: Dependabot
+# leaves any fix that needs a new range in package.json, which does ship to
+# consumers, to Renovate.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    versioning-strategy: lockfile-only
+    open-pull-requests-limit: 0
+    schedule:
+      interval: weekly
+    # Inert while the limit is 0, since cooldown applies only to version
+    # updates; zizmor's dependabot-cooldown audit requires it, and it holds new
+    # versions back for a week if version updates are ever turned on.
+    cooldown:
+      default-days: 7
+    commit-message:
+      prefix: "chore(lockfile)"

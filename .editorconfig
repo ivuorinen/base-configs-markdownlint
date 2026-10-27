@@ -19,3 +19,9 @@ trim_trailing_whitespace = false
 [{*.mk,GNUmakefile,makefile}]
 tab_width = 4
 indent_style = tab
+
+# The findings store is written by the nitpicker findings tool, not by hand.
+# INDEX.md table rows carry each finding's title and resolved.jsonl holds one
+# record per line, so neither can be wrapped. Last, so it overrides [{*.md}].
+[docs/audit/findings/**]
+max_line_length = unset
