@@ -1,0 +1,14 @@
+# osv-scanner configuration: https://google.github.io/osv-scanner/configuration/
+
+# katex reaches the tree only through markdownlint -> micromark-extension-math,
+# whose latest release (3.1.0) still requires katex ^0.16.0, so the fixed 0.18.2
+# cannot be resolved without forcing a 0.x range. The advisory is a read-side
+# prototype-pollution gadget in KaTeX's renderer options, reachable only by
+# rendering. markdownlint imports `math` (the syntax extension) and never
+# `mathHtml`, the one caller of katex.renderToString: linting a document full of
+# math, with renderToString instrumented, called it zero times (2026-10-27).
+# Revisit when micromark-extension-math widens its katex range, or by the date.
+[[IgnoredVulns]]
+id = "GHSA-238p-pmpm-9mq7"
+ignoreUntil = 2027-01-27T00:00:00Z
+reason = "katex.renderToString is unreachable: markdownlint uses micromark-extension-math's math syntax only, not mathHtml"
