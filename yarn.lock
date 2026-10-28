@@ -89,10 +89,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ivuorinen/config-checker@npm:^2.2.17, @ivuorinen/config-checker@npm:^2.6.7":
-  version: 2.6.22
-  resolution: "@ivuorinen/config-checker@npm:2.6.22"
-  checksum: 10c0/bd6e9fdae395de0408b26697f971a89377f1ec2212eae352e010cb94825723870ccf17e3c2fea8ac2b564e10d0aaba1fc03d2ded7fac2506734b8079cbc37ea1
+"@ivuorinen/config-checker@npm:^2.2.17, @ivuorinen/config-checker@npm:^2.7.0":
+  version: 2.7.0
+  resolution: "@ivuorinen/config-checker@npm:2.7.0"
+  checksum: 10c0/9b61a47b65408a8a886e87b55e476fcb7ced51bd24bc06d9f225f91884516c92a52d608e8e22f870dab5c6915d4a51dc2fa97639eaf4b9d2090d26de00f5794f
   languageName: node
   linkType: hard
 
@@ -100,7 +100,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ivuorinen/markdownlint-config@workspace:."
   dependencies:
-    "@ivuorinen/config-checker": "npm:^2.6.7"
+    "@ivuorinen/config-checker": "npm:^2.7.0"
     "@ivuorinen/semantic-release-config": "npm:^3.0.0"
     markdownlint-cli: "npm:^0.50.0"
   languageName: unknown
