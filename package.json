@@ -41,7 +41,7 @@
     "test": "node -e \"JSON.parse(require('fs').readFileSync('./index.json', 'utf8')); console.log('index.json is valid JSON');\" && node --test"
   },
   "dependencies": {
-    "@ivuorinen/config-checker": "^2.6.7",
+    "@ivuorinen/config-checker": "^2.7.0",
     "markdownlint-cli": "^0.50.0"
   },
   "packageManager": "yarn@4.18.1",
