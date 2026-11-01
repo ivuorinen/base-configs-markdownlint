@@ -77,7 +77,7 @@ jobs:
         run: yarn install --immutable --mode=skip-build
 
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@d9bf53a078bd2f86aaffaec796dbb3d28f1b6f34 # v8.1.3
+        uses: cycjimmy/semantic-release-action@ad51787758d9654d5a75150a89a6fa9b3ccef95e # v8.1.4
         env:
           # No NPM_TOKEN: @semantic-release/npm publishes via OIDC Trusted
           # Publishing using the id-token: write permission above.
